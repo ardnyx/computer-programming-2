@@ -116,6 +116,18 @@
             label74 = new Label();
             label75 = new Label();
             label76 = new Label();
+            pictureBox1 = new PictureBox();
+            label77 = new Label();
+            label78 = new Label();
+            label79 = new Label();
+            label80 = new Label();
+            label81 = new Label();
+            label82 = new Label();
+            pictureBox2 = new PictureBox();
+            label83 = new Label();
+            label84 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -1046,12 +1058,124 @@
             label76.TabIndex = 71;
             label76.Text = "0.00";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Black;
+            pictureBox1.Location = new Point(638, 510);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(345, 10);
+            pictureBox1.TabIndex = 91;
+            pictureBox1.TabStop = false;
+            // 
+            // label77
+            // 
+            label77.AutoSize = true;
+            label77.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label77.Location = new Point(795, 535);
+            label77.Name = "label77";
+            label77.Size = new Size(135, 21);
+            label77.TabIndex = 92;
+            label77.Text = "Assessment Amt. :";
+            // 
+            // label78
+            // 
+            label78.AutoSize = true;
+            label78.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label78.Location = new Point(941, 535);
+            label78.Name = "label78";
+            label78.Size = new Size(40, 21);
+            label78.TabIndex = 93;
+            label78.Text = "0.00";
+            label78.TextAlign = ContentAlignment.TopRight;
+            // 
+            // label79
+            // 
+            label79.AutoSize = true;
+            label79.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label79.Location = new Point(941, 565);
+            label79.Name = "label79";
+            label79.Size = new Size(40, 21);
+            label79.TabIndex = 95;
+            label79.Text = "0.00";
+            label79.TextAlign = ContentAlignment.TopRight;
+            // 
+            // label80
+            // 
+            label80.AutoSize = true;
+            label80.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label80.Location = new Point(852, 565);
+            label80.Name = "label80";
+            label80.Size = new Size(82, 21);
+            label80.TabIndex = 94;
+            label80.Text = "Discount : ";
+            // 
+            // label81
+            // 
+            label81.AutoSize = true;
+            label81.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label81.Location = new Point(941, 592);
+            label81.Name = "label81";
+            label81.Size = new Size(40, 21);
+            label81.TabIndex = 97;
+            label81.Text = "0.00";
+            label81.TextAlign = ContentAlignment.TopRight;
+            // 
+            // label82
+            // 
+            label82.AutoSize = true;
+            label82.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label82.Location = new Point(811, 592);
+            label82.Name = "label82";
+            label82.Size = new Size(119, 21);
+            label82.TabIndex = 96;
+            label82.Text = "Downpayment :";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Black;
+            pictureBox2.Location = new Point(638, 627);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(345, 10);
+            pictureBox2.TabIndex = 98;
+            pictureBox2.TabStop = false;
+            // 
+            // label83
+            // 
+            label83.AutoSize = true;
+            label83.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label83.Location = new Point(941, 659);
+            label83.Name = "label83";
+            label83.Size = new Size(40, 21);
+            label83.TabIndex = 100;
+            label83.Text = "0.00";
+            label83.TextAlign = ContentAlignment.TopRight;
+            // 
+            // label84
+            // 
+            label84.AutoSize = true;
+            label84.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label84.Location = new Point(845, 659);
+            label84.Name = "label84";
+            label84.Size = new Size(85, 21);
+            label84.TabIndex = 99;
+            label84.Text = "Total Due : ";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1255, 743);
+            ClientSize = new Size(1001, 743);
+            Controls.Add(label83);
+            Controls.Add(label84);
+            Controls.Add(pictureBox2);
+            Controls.Add(label81);
+            Controls.Add(label82);
+            Controls.Add(label79);
+            Controls.Add(label80);
+            Controls.Add(label78);
+            Controls.Add(label77);
+            Controls.Add(pictureBox1);
             Controls.Add(label57);
             Controls.Add(label58);
             Controls.Add(label59);
@@ -1144,6 +1268,8 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1238,5 +1364,15 @@
         private Label label74;
         private Label label75;
         private Label label76;
+        private PictureBox pictureBox1;
+        private Label label77;
+        private Label label78;
+        private Label label79;
+        private Label label80;
+        private Label label81;
+        private Label label82;
+        private PictureBox pictureBox2;
+        private Label label83;
+        private Label label84;
     }
 }
