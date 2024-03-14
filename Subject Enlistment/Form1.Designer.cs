@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             TableLayoutPanel tableLayoutPanel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             box_a5 = new Label();
             box5 = new Label();
             box_a4 = new Label();
@@ -94,7 +95,6 @@
             misc11 = new Label();
             misc10 = new Label();
             misc9 = new Label();
-            laboratoryFee = new Label();
             misc8 = new Label();
             misc7 = new Label();
             misc6 = new Label();
@@ -103,8 +103,6 @@
             misc3 = new Label();
             misc2 = new Label();
             misc1 = new Label();
-            tuitionFeeLab = new Label();
-            tuitionFeeLec = new Label();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -141,6 +139,13 @@
             termBox = new ComboBox();
             misc16 = new Label();
             pictureBox2 = new PictureBox();
+            pictureBox15 = new PictureBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            tuitionFeeLec = new TextBox();
+            tuitionFeeLab = new TextBox();
+            laboratoryFee = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -157,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -178,7 +184,7 @@
             tableLayoutPanel1.Controls.Add(box2, 0, 1);
             tableLayoutPanel1.Controls.Add(box_a1, 1, 0);
             tableLayoutPanel1.Controls.Add(box1, 0, 0);
-            tableLayoutPanel1.Location = new Point(1160, 333);
+            tableLayoutPanel1.Location = new Point(1069, 572);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
@@ -186,14 +192,14 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.Size = new Size(271, 211);
+            tableLayoutPanel1.Size = new Size(417, 211);
             tableLayoutPanel1.TabIndex = 135;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // box_a5
             // 
             box_a5.AutoSize = true;
-            box_a5.Location = new Point(139, 169);
+            box_a5.Location = new Point(212, 169);
             box_a5.Name = "box_a5";
             box_a5.Size = new Size(0, 19);
             box_a5.TabIndex = 9;
@@ -209,7 +215,7 @@
             // box_a4
             // 
             box_a4.AutoSize = true;
-            box_a4.Location = new Point(139, 127);
+            box_a4.Location = new Point(212, 127);
             box_a4.Name = "box_a4";
             box_a4.Size = new Size(0, 19);
             box_a4.TabIndex = 7;
@@ -225,7 +231,7 @@
             // box_a3
             // 
             box_a3.AutoSize = true;
-            box_a3.Location = new Point(139, 85);
+            box_a3.Location = new Point(212, 85);
             box_a3.Name = "box_a3";
             box_a3.Size = new Size(0, 19);
             box_a3.TabIndex = 5;
@@ -241,7 +247,7 @@
             // box_a2
             // 
             box_a2.AutoSize = true;
-            box_a2.Location = new Point(139, 43);
+            box_a2.Location = new Point(212, 43);
             box_a2.Name = "box_a2";
             box_a2.Size = new Size(0, 19);
             box_a2.TabIndex = 3;
@@ -257,7 +263,7 @@
             // box_a1
             // 
             box_a1.AutoSize = true;
-            box_a1.Location = new Point(139, 1);
+            box_a1.Location = new Point(212, 1);
             box_a1.Name = "box_a1";
             box_a1.Size = new Size(0, 19);
             box_a1.TabIndex = 1;
@@ -276,7 +282,7 @@
             label1.BackColor = SystemColors.ButtonHighlight;
             label1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(0, 0, 192);
-            label1.Location = new Point(12, 76);
+            label1.Location = new Point(39, 134);
             label1.Name = "label1";
             label1.Size = new Size(219, 30);
             label1.TabIndex = 0;
@@ -288,7 +294,7 @@
             studentStatus.AutoSize = true;
             studentStatus.BackColor = SystemColors.ButtonHighlight;
             studentStatus.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            studentStatus.Location = new Point(225, 115);
+            studentStatus.Location = new Point(252, 173);
             studentStatus.Name = "studentStatus";
             studentStatus.Size = new Size(95, 25);
             studentStatus.TabIndex = 1;
@@ -300,7 +306,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.LightGray;
             label3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(19, 152);
+            label3.Location = new Point(46, 210);
             label3.Name = "label3";
             label3.Size = new Size(58, 20);
             label3.TabIndex = 3;
@@ -311,7 +317,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.LightGray;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(100, 152);
+            label4.Location = new Point(127, 210);
             label4.Name = "label4";
             label4.Size = new Size(58, 20);
             label4.TabIndex = 4;
@@ -323,7 +329,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.LightGray;
             label5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(507, 152);
+            label5.Location = new Point(534, 210);
             label5.Name = "label5";
             label5.Size = new Size(42, 20);
             label5.TabIndex = 5;
@@ -334,7 +340,7 @@
             label7.AutoSize = true;
             label7.BackColor = Color.LightGray;
             label7.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(100, 195);
+            label7.Location = new Point(127, 253);
             label7.Name = "label7";
             label7.Size = new Size(292, 25);
             label7.TabIndex = 8;
@@ -345,7 +351,7 @@
             label8.AutoSize = true;
             label8.BackColor = Color.LightGray;
             label8.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(19, 195);
+            label8.Location = new Point(46, 253);
             label8.Name = "label8";
             label8.Size = new Size(62, 25);
             label8.TabIndex = 7;
@@ -357,7 +363,7 @@
             label10.AutoSize = true;
             label10.BackColor = Color.LightGray;
             label10.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(100, 246);
+            label10.Location = new Point(127, 304);
             label10.Name = "label10";
             label10.Size = new Size(289, 25);
             label10.TabIndex = 12;
@@ -368,7 +374,7 @@
             label11.AutoSize = true;
             label11.BackColor = Color.LightGray;
             label11.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(19, 246);
+            label11.Location = new Point(46, 304);
             label11.Name = "label11";
             label11.Size = new Size(62, 25);
             label11.TabIndex = 11;
@@ -379,7 +385,7 @@
             label13.AutoSize = true;
             label13.BackColor = Color.LightGray;
             label13.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(100, 297);
+            label13.Location = new Point(127, 355);
             label13.Name = "label13";
             label13.Size = new Size(332, 25);
             label13.TabIndex = 16;
@@ -390,7 +396,7 @@
             label14.AutoSize = true;
             label14.BackColor = Color.LightGray;
             label14.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(19, 297);
+            label14.Location = new Point(46, 355);
             label14.Name = "label14";
             label14.Size = new Size(62, 25);
             label14.TabIndex = 15;
@@ -401,7 +407,7 @@
             label16.AutoSize = true;
             label16.BackColor = Color.LightGray;
             label16.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.Location = new Point(100, 348);
+            label16.Location = new Point(127, 406);
             label16.Name = "label16";
             label16.Size = new Size(329, 25);
             label16.TabIndex = 20;
@@ -412,7 +418,7 @@
             label17.AutoSize = true;
             label17.BackColor = Color.LightGray;
             label17.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label17.Location = new Point(19, 348);
+            label17.Location = new Point(46, 406);
             label17.Name = "label17";
             label17.Size = new Size(62, 25);
             label17.TabIndex = 19;
@@ -423,7 +429,7 @@
             label19.AutoSize = true;
             label19.BackColor = Color.LightGray;
             label19.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.Location = new Point(100, 399);
+            label19.Location = new Point(127, 457);
             label19.Name = "label19";
             label19.Size = new Size(395, 25);
             label19.TabIndex = 24;
@@ -434,7 +440,7 @@
             label20.AutoSize = true;
             label20.BackColor = Color.LightGray;
             label20.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.Location = new Point(19, 399);
+            label20.Location = new Point(46, 457);
             label20.Name = "label20";
             label20.Size = new Size(62, 25);
             label20.TabIndex = 23;
@@ -445,7 +451,7 @@
             label22.AutoSize = true;
             label22.BackColor = Color.LightGray;
             label22.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label22.Location = new Point(100, 450);
+            label22.Location = new Point(127, 508);
             label22.Name = "label22";
             label22.Size = new Size(392, 25);
             label22.TabIndex = 28;
@@ -456,7 +462,7 @@
             label23.AutoSize = true;
             label23.BackColor = Color.LightGray;
             label23.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label23.Location = new Point(19, 450);
+            label23.Location = new Point(46, 508);
             label23.Name = "label23";
             label23.Size = new Size(62, 25);
             label23.TabIndex = 27;
@@ -467,7 +473,7 @@
             label25.AutoSize = true;
             label25.BackColor = Color.LightGray;
             label25.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label25.Location = new Point(100, 501);
+            label25.Location = new Point(127, 559);
             label25.Name = "label25";
             label25.Size = new Size(129, 25);
             label25.TabIndex = 32;
@@ -478,7 +484,7 @@
             label26.AutoSize = true;
             label26.BackColor = Color.LightGray;
             label26.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label26.Location = new Point(19, 501);
+            label26.Location = new Point(46, 559);
             label26.Name = "label26";
             label26.Size = new Size(62, 25);
             label26.TabIndex = 31;
@@ -489,7 +495,7 @@
             label28.AutoSize = true;
             label28.BackColor = Color.LightGray;
             label28.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label28.Location = new Point(100, 552);
+            label28.Location = new Point(127, 610);
             label28.Name = "label28";
             label28.Size = new Size(233, 25);
             label28.TabIndex = 36;
@@ -500,7 +506,7 @@
             label29.AutoSize = true;
             label29.BackColor = Color.LightGray;
             label29.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(19, 552);
+            label29.Location = new Point(46, 610);
             label29.Name = "label29";
             label29.Size = new Size(62, 25);
             label29.TabIndex = 35;
@@ -511,7 +517,7 @@
             label31.AutoSize = true;
             label31.BackColor = Color.LightGray;
             label31.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label31.Location = new Point(100, 603);
+            label31.Location = new Point(127, 661);
             label31.Name = "label31";
             label31.Size = new Size(305, 25);
             label31.TabIndex = 40;
@@ -522,7 +528,7 @@
             label32.AutoSize = true;
             label32.BackColor = Color.LightGray;
             label32.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label32.Location = new Point(19, 603);
+            label32.Location = new Point(46, 661);
             label32.Name = "label32";
             label32.Size = new Size(62, 25);
             label32.TabIndex = 39;
@@ -533,7 +539,7 @@
             label34.AutoSize = true;
             label34.BackColor = Color.LightGray;
             label34.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label34.Location = new Point(100, 654);
+            label34.Location = new Point(127, 712);
             label34.Name = "label34";
             label34.Size = new Size(115, 25);
             label34.TabIndex = 44;
@@ -544,7 +550,7 @@
             label35.AutoSize = true;
             label35.BackColor = Color.LightGray;
             label35.Font = new Font("Segoe UI", 13.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label35.Location = new Point(19, 654);
+            label35.Location = new Point(46, 712);
             label35.Name = "label35";
             label35.Size = new Size(62, 25);
             label35.TabIndex = 43;
@@ -556,7 +562,7 @@
             label36.BackColor = SystemColors.ButtonHighlight;
             label36.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             label36.ForeColor = Color.FromArgb(0, 0, 192);
-            label36.Location = new Point(640, 10);
+            label36.Location = new Point(626, 144);
             label36.Name = "label36";
             label36.Size = new Size(201, 30);
             label36.TabIndex = 46;
@@ -567,7 +573,7 @@
             label37.AutoSize = true;
             label37.BackColor = SystemColors.ButtonHighlight;
             label37.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label37.Location = new Point(643, 49);
+            label37.Location = new Point(629, 183);
             label37.Name = "label37";
             label37.Size = new Size(191, 19);
             label37.TabIndex = 47;
@@ -579,7 +585,7 @@
             label38.AutoSize = true;
             label38.BackColor = SystemColors.ButtonHighlight;
             label38.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label38.Location = new Point(643, 72);
+            label38.Location = new Point(629, 206);
             label38.Name = "label38";
             label38.Size = new Size(192, 19);
             label38.TabIndex = 48;
@@ -590,7 +596,7 @@
             label42.AutoSize = true;
             label42.BackColor = SystemColors.ButtonHighlight;
             label42.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label42.Location = new Point(643, 94);
+            label42.Location = new Point(629, 228);
             label42.Name = "label42";
             label42.Size = new Size(115, 19);
             label42.TabIndex = 52;
@@ -602,7 +608,7 @@
             label39.AutoSize = true;
             label39.BackColor = SystemColors.ButtonHighlight;
             label39.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label39.Location = new Point(643, 117);
+            label39.Location = new Point(629, 251);
             label39.Name = "label39";
             label39.Size = new Size(68, 19);
             label39.TabIndex = 53;
@@ -614,7 +620,7 @@
             label40.AutoSize = true;
             label40.BackColor = SystemColors.ButtonHighlight;
             label40.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label40.Location = new Point(643, 141);
+            label40.Location = new Point(629, 275);
             label40.Name = "label40";
             label40.Size = new Size(161, 19);
             label40.TabIndex = 54;
@@ -625,7 +631,7 @@
             label41.AutoSize = true;
             label41.BackColor = SystemColors.ButtonHighlight;
             label41.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label41.Location = new Point(643, 163);
+            label41.Location = new Point(629, 297);
             label41.Name = "label41";
             label41.Size = new Size(45, 19);
             label41.TabIndex = 55;
@@ -636,7 +642,7 @@
             label43.AutoSize = true;
             label43.BackColor = SystemColors.ButtonHighlight;
             label43.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label43.Location = new Point(643, 186);
+            label43.Location = new Point(629, 320);
             label43.Name = "label43";
             label43.Size = new Size(100, 19);
             label43.TabIndex = 56;
@@ -647,7 +653,7 @@
             label44.AutoSize = true;
             label44.BackColor = SystemColors.ButtonHighlight;
             label44.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label44.Location = new Point(643, 209);
+            label44.Location = new Point(629, 343);
             label44.Name = "label44";
             label44.Size = new Size(241, 19);
             label44.TabIndex = 57;
@@ -658,7 +664,7 @@
             label45.AutoSize = true;
             label45.BackColor = SystemColors.ButtonHighlight;
             label45.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label45.Location = new Point(643, 232);
+            label45.Location = new Point(629, 366);
             label45.Name = "label45";
             label45.Size = new Size(78, 19);
             label45.TabIndex = 58;
@@ -669,7 +675,7 @@
             label46.AutoSize = true;
             label46.BackColor = SystemColors.ButtonHighlight;
             label46.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label46.Location = new Point(643, 256);
+            label46.Location = new Point(629, 390);
             label46.Name = "label46";
             label46.Size = new Size(108, 19);
             label46.TabIndex = 59;
@@ -680,7 +686,7 @@
             label47.AutoSize = true;
             label47.BackColor = SystemColors.ButtonHighlight;
             label47.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label47.Location = new Point(643, 280);
+            label47.Location = new Point(629, 414);
             label47.Name = "label47";
             label47.Size = new Size(165, 19);
             label47.TabIndex = 60;
@@ -691,7 +697,7 @@
             label48.AutoSize = true;
             label48.BackColor = SystemColors.ButtonHighlight;
             label48.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label48.Location = new Point(643, 304);
+            label48.Location = new Point(629, 438);
             label48.Name = "label48";
             label48.Size = new Size(226, 19);
             label48.TabIndex = 61;
@@ -702,7 +708,7 @@
             label49.AutoSize = true;
             label49.BackColor = SystemColors.ButtonHighlight;
             label49.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label49.Location = new Point(643, 328);
+            label49.Location = new Point(629, 462);
             label49.Name = "label49";
             label49.Size = new Size(86, 19);
             label49.TabIndex = 62;
@@ -713,7 +719,7 @@
             label50.AutoSize = true;
             label50.BackColor = SystemColors.ButtonHighlight;
             label50.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label50.Location = new Point(643, 351);
+            label50.Location = new Point(629, 485);
             label50.Name = "label50";
             label50.Size = new Size(154, 19);
             label50.TabIndex = 63;
@@ -724,7 +730,7 @@
             label51.AutoSize = true;
             label51.BackColor = SystemColors.ButtonHighlight;
             label51.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label51.Location = new Point(643, 373);
+            label51.Location = new Point(629, 507);
             label51.Name = "label51";
             label51.Size = new Size(100, 19);
             label51.TabIndex = 64;
@@ -735,7 +741,7 @@
             label52.AutoSize = true;
             label52.BackColor = SystemColors.ButtonHighlight;
             label52.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label52.Location = new Point(643, 395);
+            label52.Location = new Point(629, 529);
             label52.Name = "label52";
             label52.Size = new Size(67, 19);
             label52.TabIndex = 65;
@@ -746,7 +752,7 @@
             label53.AutoSize = true;
             label53.BackColor = SystemColors.ButtonHighlight;
             label53.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label53.Location = new Point(643, 417);
+            label53.Location = new Point(629, 551);
             label53.Name = "label53";
             label53.Size = new Size(35, 19);
             label53.TabIndex = 66;
@@ -757,7 +763,7 @@
             label54.AutoSize = true;
             label54.BackColor = SystemColors.ButtonHighlight;
             label54.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label54.Location = new Point(643, 438);
+            label54.Location = new Point(629, 572);
             label54.Name = "label54";
             label54.Size = new Size(163, 19);
             label54.TabIndex = 67;
@@ -768,7 +774,7 @@
             label55.AutoSize = true;
             label55.BackColor = SystemColors.ButtonHighlight;
             label55.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label55.Location = new Point(643, 460);
+            label55.Location = new Point(629, 594);
             label55.Name = "label55";
             label55.Size = new Size(183, 19);
             label55.TabIndex = 68;
@@ -779,7 +785,7 @@
             label56.AutoSize = true;
             label56.BackColor = SystemColors.ButtonHighlight;
             label56.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label56.Location = new Point(643, 482);
+            label56.Location = new Point(629, 616);
             label56.Name = "label56";
             label56.Size = new Size(87, 19);
             label56.TabIndex = 69;
@@ -789,7 +795,7 @@
             // 
             splitter1.Location = new Point(0, 0);
             splitter1.Name = "splitter1";
-            splitter1.Size = new Size(3, 743);
+            splitter1.Size = new Size(3, 804);
             splitter1.TabIndex = 70;
             splitter1.TabStop = false;
             // 
@@ -798,7 +804,7 @@
             misc17.AutoSize = true;
             misc17.BackColor = SystemColors.ButtonHighlight;
             misc17.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc17.Location = new Point(929, 482);
+            misc17.Location = new Point(915, 616);
             misc17.Name = "misc17";
             misc17.Size = new Size(52, 19);
             misc17.TabIndex = 90;
@@ -810,7 +816,7 @@
             misc15.AutoSize = true;
             misc15.BackColor = SystemColors.ButtonHighlight;
             misc15.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc15.Location = new Point(929, 438);
+            misc15.Location = new Point(915, 572);
             misc15.Name = "misc15";
             misc15.Size = new Size(52, 19);
             misc15.TabIndex = 88;
@@ -822,7 +828,7 @@
             misc14.AutoSize = true;
             misc14.BackColor = SystemColors.ButtonHighlight;
             misc14.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc14.Location = new Point(937, 417);
+            misc14.Location = new Point(923, 551);
             misc14.Name = "misc14";
             misc14.Size = new Size(44, 19);
             misc14.TabIndex = 87;
@@ -834,7 +840,7 @@
             misc13.AutoSize = true;
             misc13.BackColor = SystemColors.ButtonHighlight;
             misc13.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc13.Location = new Point(918, 396);
+            misc13.Location = new Point(904, 530);
             misc13.Name = "misc13";
             misc13.Size = new Size(63, 19);
             misc13.TabIndex = 86;
@@ -846,7 +852,7 @@
             misc12.AutoSize = true;
             misc12.BackColor = SystemColors.ButtonHighlight;
             misc12.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc12.Location = new Point(929, 373);
+            misc12.Location = new Point(915, 507);
             misc12.Name = "misc12";
             misc12.Size = new Size(52, 19);
             misc12.TabIndex = 85;
@@ -858,7 +864,7 @@
             misc11.AutoSize = true;
             misc11.BackColor = SystemColors.ButtonHighlight;
             misc11.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc11.Location = new Point(929, 351);
+            misc11.Location = new Point(915, 485);
             misc11.Name = "misc11";
             misc11.Size = new Size(52, 19);
             misc11.TabIndex = 84;
@@ -870,7 +876,7 @@
             misc10.AutoSize = true;
             misc10.BackColor = SystemColors.ButtonHighlight;
             misc10.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc10.Location = new Point(918, 328);
+            misc10.Location = new Point(904, 462);
             misc10.Name = "misc10";
             misc10.Size = new Size(63, 19);
             misc10.TabIndex = 83;
@@ -882,32 +888,19 @@
             misc9.AutoSize = true;
             misc9.BackColor = SystemColors.ButtonHighlight;
             misc9.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc9.Location = new Point(929, 304);
+            misc9.Location = new Point(915, 438);
             misc9.Name = "misc9";
             misc9.Size = new Size(52, 19);
             misc9.TabIndex = 82;
             misc9.Text = "788.00";
             misc9.TextAlign = ContentAlignment.TopRight;
             // 
-            // laboratoryFee
-            // 
-            laboratoryFee.AutoSize = true;
-            laboratoryFee.BackColor = SystemColors.ButtonHighlight;
-            laboratoryFee.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            laboratoryFee.Location = new Point(945, 280);
-            laboratoryFee.Name = "laboratoryFee";
-            laboratoryFee.RightToLeft = RightToLeft.Yes;
-            laboratoryFee.Size = new Size(36, 19);
-            laboratoryFee.TabIndex = 81;
-            laboratoryFee.Text = "0.00";
-            laboratoryFee.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // misc8
             // 
             misc8.AutoSize = true;
             misc8.BackColor = SystemColors.ButtonHighlight;
             misc8.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc8.Location = new Point(937, 256);
+            misc8.Location = new Point(923, 390);
             misc8.Name = "misc8";
             misc8.Size = new Size(44, 19);
             misc8.TabIndex = 80;
@@ -919,7 +912,7 @@
             misc7.AutoSize = true;
             misc7.BackColor = SystemColors.ButtonHighlight;
             misc7.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc7.Location = new Point(929, 231);
+            misc7.Location = new Point(915, 365);
             misc7.Name = "misc7";
             misc7.Size = new Size(52, 19);
             misc7.TabIndex = 79;
@@ -931,7 +924,7 @@
             misc6.AutoSize = true;
             misc6.BackColor = SystemColors.ButtonHighlight;
             misc6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc6.Location = new Point(918, 208);
+            misc6.Location = new Point(904, 342);
             misc6.Name = "misc6";
             misc6.Size = new Size(63, 19);
             misc6.TabIndex = 78;
@@ -943,7 +936,7 @@
             misc5.AutoSize = true;
             misc5.BackColor = SystemColors.ButtonHighlight;
             misc5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc5.Location = new Point(929, 186);
+            misc5.Location = new Point(915, 320);
             misc5.Name = "misc5";
             misc5.Size = new Size(52, 19);
             misc5.TabIndex = 77;
@@ -955,7 +948,7 @@
             misc4.AutoSize = true;
             misc4.BackColor = SystemColors.ButtonHighlight;
             misc4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc4.Location = new Point(937, 163);
+            misc4.Location = new Point(923, 297);
             misc4.Name = "misc4";
             misc4.Size = new Size(44, 19);
             misc4.TabIndex = 76;
@@ -967,7 +960,7 @@
             misc3.AutoSize = true;
             misc3.BackColor = SystemColors.ButtonHighlight;
             misc3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc3.Location = new Point(937, 141);
+            misc3.Location = new Point(923, 275);
             misc3.Name = "misc3";
             misc3.Size = new Size(44, 19);
             misc3.TabIndex = 75;
@@ -979,7 +972,7 @@
             misc2.AutoSize = true;
             misc2.BackColor = SystemColors.ButtonHighlight;
             misc2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc2.Location = new Point(929, 117);
+            misc2.Location = new Point(915, 251);
             misc2.Name = "misc2";
             misc2.Size = new Size(52, 19);
             misc2.TabIndex = 74;
@@ -991,7 +984,7 @@
             misc1.AutoSize = true;
             misc1.BackColor = SystemColors.ButtonHighlight;
             misc1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc1.Location = new Point(937, 94);
+            misc1.Location = new Point(923, 228);
             misc1.Name = "misc1";
             misc1.RightToLeft = RightToLeft.Yes;
             misc1.Size = new Size(44, 19);
@@ -1000,37 +993,10 @@
             misc1.TextAlign = ContentAlignment.MiddleRight;
             misc1.Click += label74_Click;
             // 
-            // tuitionFeeLab
-            // 
-            tuitionFeeLab.AutoSize = true;
-            tuitionFeeLab.BackColor = SystemColors.ButtonHighlight;
-            tuitionFeeLab.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            tuitionFeeLab.Location = new Point(945, 72);
-            tuitionFeeLab.Name = "tuitionFeeLab";
-            tuitionFeeLab.RightToLeft = RightToLeft.Yes;
-            tuitionFeeLab.Size = new Size(36, 19);
-            tuitionFeeLab.TabIndex = 72;
-            tuitionFeeLab.Text = "0.00";
-            tuitionFeeLab.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // tuitionFeeLec
-            // 
-            tuitionFeeLec.AutoSize = true;
-            tuitionFeeLec.BackColor = SystemColors.ButtonHighlight;
-            tuitionFeeLec.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            tuitionFeeLec.ImageAlign = ContentAlignment.MiddleRight;
-            tuitionFeeLec.Location = new Point(945, 49);
-            tuitionFeeLec.Name = "tuitionFeeLec";
-            tuitionFeeLec.RightToLeft = RightToLeft.No;
-            tuitionFeeLec.Size = new Size(36, 19);
-            tuitionFeeLec.TabIndex = 71;
-            tuitionFeeLec.Text = "0.00";
-            tuitionFeeLec.TextAlign = ContentAlignment.MiddleRight;
-            // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Black;
-            pictureBox1.Location = new Point(638, 510);
+            pictureBox1.Location = new Point(624, 644);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(345, 10);
             pictureBox1.TabIndex = 91;
@@ -1039,72 +1005,72 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.LightGray;
-            pictureBox3.Location = new Point(16, 148);
+            pictureBox3.Location = new Point(28, 206);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(536, 31);
+            pictureBox3.Size = new Size(551, 31);
             pictureBox3.TabIndex = 101;
             pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.LightGray;
-            pictureBox4.Location = new Point(16, 187);
+            pictureBox4.Location = new Point(28, 245);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(536, 39);
+            pictureBox4.Size = new Size(551, 39);
             pictureBox4.TabIndex = 102;
             pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.LightGray;
-            pictureBox5.Location = new Point(16, 238);
+            pictureBox5.Location = new Point(28, 296);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(536, 39);
+            pictureBox5.Size = new Size(551, 39);
             pictureBox5.TabIndex = 103;
             pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.LightGray;
-            pictureBox6.Location = new Point(16, 289);
+            pictureBox6.Location = new Point(28, 347);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(536, 39);
+            pictureBox6.Size = new Size(551, 39);
             pictureBox6.TabIndex = 104;
             pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.LightGray;
-            pictureBox7.Location = new Point(16, 340);
+            pictureBox7.Location = new Point(28, 398);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(536, 39);
+            pictureBox7.Size = new Size(551, 39);
             pictureBox7.TabIndex = 105;
             pictureBox7.TabStop = false;
             // 
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.LightGray;
-            pictureBox8.Location = new Point(16, 391);
+            pictureBox8.Location = new Point(28, 449);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(536, 39);
+            pictureBox8.Size = new Size(551, 39);
             pictureBox8.TabIndex = 106;
             pictureBox8.TabStop = false;
             // 
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.LightGray;
-            pictureBox9.Location = new Point(16, 442);
+            pictureBox9.Location = new Point(28, 500);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(536, 39);
+            pictureBox9.Size = new Size(551, 39);
             pictureBox9.TabIndex = 107;
             pictureBox9.TabStop = false;
             // 
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.LightGray;
-            pictureBox10.Location = new Point(16, 493);
+            pictureBox10.Location = new Point(28, 551);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(536, 39);
+            pictureBox10.Size = new Size(551, 39);
             pictureBox10.TabIndex = 108;
             pictureBox10.TabStop = false;
             pictureBox10.Click += pictureBox10_Click;
@@ -1112,33 +1078,33 @@
             // pictureBox11
             // 
             pictureBox11.BackColor = Color.LightGray;
-            pictureBox11.Location = new Point(16, 544);
+            pictureBox11.Location = new Point(28, 602);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(536, 39);
+            pictureBox11.Size = new Size(551, 39);
             pictureBox11.TabIndex = 109;
             pictureBox11.TabStop = false;
             // 
             // pictureBox12
             // 
             pictureBox12.BackColor = Color.LightGray;
-            pictureBox12.Location = new Point(16, 595);
+            pictureBox12.Location = new Point(28, 653);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(536, 39);
+            pictureBox12.Size = new Size(551, 39);
             pictureBox12.TabIndex = 110;
             pictureBox12.TabStop = false;
             // 
             // pictureBox13
             // 
             pictureBox13.BackColor = Color.LightGray;
-            pictureBox13.Location = new Point(16, 646);
+            pictureBox13.Location = new Point(28, 704);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(536, 39);
+            pictureBox13.Size = new Size(551, 39);
             pictureBox13.TabIndex = 111;
             pictureBox13.TabStop = false;
             // 
             // comProgLab
             // 
-            comProgLab.Location = new Point(507, 195);
+            comProgLab.Location = new Point(534, 253);
             comProgLab.Name = "comProgLab";
             comProgLab.Size = new Size(33, 25);
             comProgLab.TabIndex = 112;
@@ -1146,7 +1112,7 @@
             // 
             // comProgLec
             // 
-            comProgLec.Location = new Point(507, 246);
+            comProgLec.Location = new Point(534, 304);
             comProgLec.Name = "comProgLec";
             comProgLec.Size = new Size(33, 25);
             comProgLec.TabIndex = 113;
@@ -1154,7 +1120,7 @@
             // 
             // oopLabInput
             // 
-            oopLabInput.Location = new Point(507, 297);
+            oopLabInput.Location = new Point(534, 355);
             oopLabInput.Name = "oopLabInput";
             oopLabInput.Size = new Size(33, 25);
             oopLabInput.TabIndex = 114;
@@ -1162,7 +1128,7 @@
             // 
             // oopLecInput
             // 
-            oopLecInput.Location = new Point(507, 348);
+            oopLecInput.Location = new Point(534, 406);
             oopLecInput.Name = "oopLecInput";
             oopLecInput.Size = new Size(33, 25);
             oopLecInput.TabIndex = 115;
@@ -1170,7 +1136,7 @@
             // 
             // appDevLabInput
             // 
-            appDevLabInput.Location = new Point(507, 399);
+            appDevLabInput.Location = new Point(534, 457);
             appDevLabInput.Name = "appDevLabInput";
             appDevLabInput.Size = new Size(33, 25);
             appDevLabInput.TabIndex = 116;
@@ -1178,7 +1144,7 @@
             // 
             // theoInput
             // 
-            theoInput.Location = new Point(507, 654);
+            theoInput.Location = new Point(534, 712);
             theoInput.Name = "theoInput";
             theoInput.Size = new Size(33, 25);
             theoInput.TabIndex = 121;
@@ -1186,7 +1152,7 @@
             // 
             // peInput
             // 
-            peInput.Location = new Point(507, 603);
+            peInput.Location = new Point(534, 661);
             peInput.Name = "peInput";
             peInput.Size = new Size(33, 25);
             peInput.TabIndex = 120;
@@ -1194,7 +1160,7 @@
             // 
             // utsInput
             // 
-            utsInput.Location = new Point(507, 552);
+            utsInput.Location = new Point(534, 610);
             utsInput.Name = "utsInput";
             utsInput.Size = new Size(33, 25);
             utsInput.TabIndex = 119;
@@ -1202,7 +1168,7 @@
             // 
             // computingTwoInput
             // 
-            computingTwoInput.Location = new Point(507, 501);
+            computingTwoInput.Location = new Point(534, 559);
             computingTwoInput.Name = "computingTwoInput";
             computingTwoInput.Size = new Size(33, 25);
             computingTwoInput.TabIndex = 118;
@@ -1210,7 +1176,7 @@
             // 
             // appDevLecInput
             // 
-            appDevLecInput.Location = new Point(507, 450);
+            appDevLecInput.Location = new Point(534, 508);
             appDevLecInput.Name = "appDevLecInput";
             appDevLecInput.Size = new Size(33, 25);
             appDevLecInput.TabIndex = 117;
@@ -1218,7 +1184,7 @@
             // 
             // enlistButton
             // 
-            enlistButton.Location = new Point(451, 693);
+            enlistButton.Location = new Point(478, 751);
             enlistButton.Name = "enlistButton";
             enlistButton.Size = new Size(101, 27);
             enlistButton.TabIndex = 122;
@@ -1232,7 +1198,7 @@
             label2.BackColor = SystemColors.ButtonHighlight;
             label2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 0, 192);
-            label2.Location = new Point(1041, 10);
+            label2.Location = new Point(1069, 144);
             label2.Name = "label2";
             label2.Size = new Size(109, 30);
             label2.TabIndex = 123;
@@ -1243,7 +1209,7 @@
             label6.AutoSize = true;
             label6.BackColor = SystemColors.ButtonHighlight;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(1041, 49);
+            label6.Location = new Point(1069, 183);
             label6.Name = "label6";
             label6.Size = new Size(133, 21);
             label6.TabIndex = 124;
@@ -1254,7 +1220,7 @@
             label9.AutoSize = true;
             label9.BackColor = SystemColors.ButtonHighlight;
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(1041, 69);
+            label9.Location = new Point(1069, 203);
             label9.Name = "label9";
             label9.Size = new Size(143, 21);
             label9.TabIndex = 125;
@@ -1263,7 +1229,7 @@
             // pictureBox14
             // 
             pictureBox14.BackColor = Color.Black;
-            pictureBox14.Location = new Point(1041, 96);
+            pictureBox14.Location = new Point(1069, 230);
             pictureBox14.Name = "pictureBox14";
             pictureBox14.Size = new Size(345, 10);
             pictureBox14.TabIndex = 126;
@@ -1275,7 +1241,7 @@
             totalTF.BackColor = SystemColors.ButtonHighlight;
             totalTF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             totalTF.ImageAlign = ContentAlignment.MiddleRight;
-            totalTF.Location = new Point(1274, 52);
+            totalTF.Location = new Point(1302, 186);
             totalTF.Name = "totalTF";
             totalTF.RightToLeft = RightToLeft.No;
             totalTF.Size = new Size(36, 19);
@@ -1289,7 +1255,7 @@
             miscFee.BackColor = SystemColors.ButtonHighlight;
             miscFee.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             miscFee.ImageAlign = ContentAlignment.MiddleRight;
-            miscFee.Location = new Point(1274, 71);
+            miscFee.Location = new Point(1302, 205);
             miscFee.Name = "miscFee";
             miscFee.RightToLeft = RightToLeft.No;
             miscFee.Size = new Size(36, 19);
@@ -1302,7 +1268,7 @@
             label000.AutoSize = true;
             label000.BackColor = SystemColors.ButtonHighlight;
             label000.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label000.Location = new Point(1041, 117);
+            label000.Location = new Point(1069, 251);
             label000.Name = "label000";
             label000.Size = new Size(152, 21);
             label000.TabIndex = 129;
@@ -1313,7 +1279,7 @@
             label12.AutoSize = true;
             label12.BackColor = SystemColors.ButtonHighlight;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(1041, 138);
+            label12.Location = new Point(1069, 272);
             label12.Name = "label12";
             label12.Size = new Size(119, 21);
             label12.TabIndex = 130;
@@ -1325,7 +1291,7 @@
             feeAssessment.BackColor = SystemColors.ButtonHighlight;
             feeAssessment.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             feeAssessment.ImageAlign = ContentAlignment.MiddleRight;
-            feeAssessment.Location = new Point(1274, 119);
+            feeAssessment.Location = new Point(1302, 253);
             feeAssessment.Name = "feeAssessment";
             feeAssessment.RightToLeft = RightToLeft.No;
             feeAssessment.Size = new Size(36, 19);
@@ -1339,7 +1305,7 @@
             DP.BackColor = SystemColors.ButtonHighlight;
             DP.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             DP.ImageAlign = ContentAlignment.MiddleRight;
-            DP.Location = new Point(1274, 141);
+            DP.Location = new Point(1302, 275);
             DP.Name = "DP";
             DP.RightToLeft = RightToLeft.No;
             DP.Size = new Size(36, 19);
@@ -1351,9 +1317,10 @@
             // 
             termBox.FormattingEnabled = true;
             termBox.Items.AddRange(new object[] { "1 Term", "2 Term", "3 Term", "4 Term", "5 Term" });
-            termBox.Location = new Point(1249, 274);
+            termBox.Location = new Point(1281, 545);
             termBox.Name = "termBox";
-            termBox.Size = new Size(137, 25);
+            termBox.RightToLeft = RightToLeft.No;
+            termBox.Size = new Size(205, 25);
             termBox.TabIndex = 134;
             termBox.Text = "PAYMENT TERMS";
             termBox.SelectedIndexChanged += termBox_SelectedIndexChanged;
@@ -1363,7 +1330,7 @@
             misc16.AutoSize = true;
             misc16.BackColor = SystemColors.ButtonHighlight;
             misc16.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            misc16.Location = new Point(929, 460);
+            misc16.Location = new Point(915, 594);
             misc16.Name = "misc16";
             misc16.Size = new Size(52, 19);
             misc16.TabIndex = 89;
@@ -1372,19 +1339,119 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = SystemColors.ButtonHighlight;
-            pictureBox2.Location = new Point(8, 0);
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Location = new Point(12, 111);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(1476, 731);
+            pictureBox2.Size = new Size(1486, 681);
             pictureBox2.TabIndex = 136;
             pictureBox2.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.BackColor = Color.Transparent;
+            pictureBox15.BackgroundImage = (Image)resources.GetObject("pictureBox15.BackgroundImage");
+            pictureBox15.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox15.Location = new Point(12, 12);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(341, 91);
+            pictureBox15.TabIndex = 137;
+            pictureBox15.TabStop = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.Yellow;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(1069, 308);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(417, 63);
+            textBox1.TabIndex = 138;
+            textBox1.Text = "Your payment has been credited to your account. Please print your enrolled subjects and assessment from your E-Learning Account as proof of your Enrollment.";
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.Yellow;
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(1069, 379);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(417, 147);
+            textBox2.TabIndex = 139;
+            textBox2.Text = resources.GetString("textBox2.Text");
+            textBox2.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.White;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(624, 661);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(345, 117);
+            textBox3.TabIndex = 140;
+            textBox3.Text = resources.GetString("textBox3.Text");
+            textBox3.TextAlign = HorizontalAlignment.Center;
+            // 
+            // tuitionFeeLec
+            // 
+            tuitionFeeLec.BackColor = Color.White;
+            tuitionFeeLec.BorderStyle = BorderStyle.None;
+            tuitionFeeLec.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            tuitionFeeLec.Location = new Point(827, 180);
+            tuitionFeeLec.Name = "tuitionFeeLec";
+            tuitionFeeLec.ReadOnly = true;
+            tuitionFeeLec.RightToLeft = RightToLeft.Yes;
+            tuitionFeeLec.Size = new Size(137, 20);
+            tuitionFeeLec.TabIndex = 141;
+            tuitionFeeLec.Text = "0.00";
+            // 
+            // tuitionFeeLab
+            // 
+            tuitionFeeLab.BackColor = Color.White;
+            tuitionFeeLab.BorderStyle = BorderStyle.None;
+            tuitionFeeLab.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            tuitionFeeLab.Location = new Point(827, 205);
+            tuitionFeeLab.Name = "tuitionFeeLab";
+            tuitionFeeLab.ReadOnly = true;
+            tuitionFeeLab.RightToLeft = RightToLeft.Yes;
+            tuitionFeeLab.Size = new Size(137, 20);
+            tuitionFeeLab.TabIndex = 142;
+            tuitionFeeLab.Text = "0.00";
+            // 
+            // laboratoryFee
+            // 
+            laboratoryFee.BackColor = Color.White;
+            laboratoryFee.BorderStyle = BorderStyle.None;
+            laboratoryFee.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            laboratoryFee.Location = new Point(827, 415);
+            laboratoryFee.Name = "laboratoryFee";
+            laboratoryFee.ReadOnly = true;
+            laboratoryFee.RightToLeft = RightToLeft.Yes;
+            laboratoryFee.Size = new Size(137, 20);
+            laboratoryFee.TabIndex = 143;
+            laboratoryFee.Text = "0.00";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1510, 743);
+            BackColor = Color.RoyalBlue;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1510, 804);
+            Controls.Add(laboratoryFee);
+            Controls.Add(tuitionFeeLab);
+            Controls.Add(tuitionFeeLec);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(pictureBox15);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(termBox);
             Controls.Add(DP);
@@ -1418,7 +1485,6 @@
             Controls.Add(misc11);
             Controls.Add(misc10);
             Controls.Add(misc9);
-            Controls.Add(laboratoryFee);
             Controls.Add(misc8);
             Controls.Add(misc7);
             Controls.Add(misc6);
@@ -1427,8 +1493,6 @@
             Controls.Add(misc3);
             Controls.Add(misc2);
             Controls.Add(misc1);
-            Controls.Add(tuitionFeeLab);
-            Controls.Add(tuitionFeeLec);
             Controls.Add(splitter1);
             Controls.Add(label56);
             Controls.Add(label55);
@@ -1508,6 +1572,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1569,7 +1634,6 @@
         private Label misc11;
         private Label misc10;
         private Label misc9;
-        private Label laboratoryFee;
         private Label misc8;
         private Label misc7;
         private Label misc6;
@@ -1578,8 +1642,6 @@
         private Label misc3;
         private Label misc2;
         private Label misc1;
-        private Label tuitionFeeLab;
-        private Label tuitionFeeLec;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
@@ -1627,5 +1689,12 @@
         private Label box_a1;
         private Label misc16;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox15;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox tuitionFeeLec;
+        private TextBox tuitionFeeLab;
+        private TextBox laboratoryFee;
     }
 }
