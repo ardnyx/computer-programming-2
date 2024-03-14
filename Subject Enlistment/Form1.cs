@@ -177,6 +177,7 @@ namespace Subject_Enlistment
             }
         }
 
+
         private void comProgLab_TextChanged(object sender, EventArgs e)
         {
 
@@ -243,6 +244,11 @@ namespace Subject_Enlistment
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }
