@@ -51,9 +51,17 @@ namespace Subject_Enlistment
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
+
+            if (!ValidateInput())
+            {
+                return;
+            }
+
+            accountCredited1.Visible = true;
+            accountCredited2.Visible = true;
+
             int cprogLec, cprogLab, oopLec, oopLab, appDevLec, appDevLab, computing2, uts, pathfit2, theology2;
             cprogLec = Convert.ToInt32(comProgLec.Text);
             cprogLab = Convert.ToInt32(comProgLab.Text);
@@ -70,9 +78,9 @@ namespace Subject_Enlistment
 
             if (totalUnits > 18)
             {
-                { studentStatus.Text = "REGULAR STUDENT"; studentStatus.Refresh(); }
+                { studentStatus.Text = "REGULAR STUDENT"; studentStatus.ForeColor = Color.Green; }
             }
-            else if (totalUnits <= 18) { studentStatus.Text = "IRREGULAR STUDENT"; studentStatus.Refresh(); }
+            else if (totalUnits <= 18) { studentStatus.Text = "IRREGULAR STUDENT"; studentStatus.ForeColor = Color.Red; studentStatus.Refresh(); }
 
             double tfLecTotal, tfLabTotal, labFeeTotal, totalTuition, assessmentFees, downpayment;
             double[] miscFees = new double[17];
@@ -101,6 +109,50 @@ namespace Subject_Enlistment
 
             double payment = (totalMiscFees + totalTuition) - downpayment;
             termPayment = payment;
+        }
+
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrWhiteSpace(comProgLec.Text) ||
+                string.IsNullOrWhiteSpace(comProgLab.Text) ||
+                string.IsNullOrWhiteSpace(oopLecInput.Text) ||
+                string.IsNullOrWhiteSpace(oopLabInput.Text) ||
+                string.IsNullOrWhiteSpace(appDevLabInput.Text) ||
+                string.IsNullOrWhiteSpace(appDevLecInput.Text) ||
+                string.IsNullOrWhiteSpace(computingTwoInput.Text) ||
+                string.IsNullOrWhiteSpace(utsInput.Text) ||
+                string.IsNullOrWhiteSpace(peInput.Text) ||
+                string.IsNullOrWhiteSpace(theoInput.Text) ||
+                !int.TryParse(comProgLec.Text, out _) ||
+                !int.TryParse(comProgLab.Text, out _) ||
+                !int.TryParse(oopLecInput.Text, out _) ||
+                !int.TryParse(oopLabInput.Text, out _) ||
+                !int.TryParse(appDevLabInput.Text, out _) ||
+                !int.TryParse(appDevLecInput.Text, out _) ||
+                !int.TryParse(computingTwoInput.Text, out _) ||
+                !int.TryParse(utsInput.Text, out _) ||
+                !int.TryParse(peInput.Text, out _) ||
+                !int.TryParse(theoInput.Text, out _))
+            {
+                MessageBox.Show("Invalid Format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (comProgLec.Text == "" ||
+                     comProgLab.Text == "" ||
+                     oopLecInput.Text == "" ||
+                     oopLabInput.Text == "" ||
+                     appDevLabInput.Text == "" ||
+                     appDevLecInput.Text == "" ||
+                     computingTwoInput.Text == "" ||
+                     utsInput.Text == "" ||
+                     peInput.Text == "" ||
+                     theoInput.Text == "")
+            {
+                MessageBox.Show("Please fill out all the forms", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
         double termPayment;
