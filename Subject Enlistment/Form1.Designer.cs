@@ -41,7 +41,6 @@
             box_a1 = new Label();
             box1 = new Label();
             label1 = new Label();
-            studentStatus = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -140,12 +139,13 @@
             misc16 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox15 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            accountCredited1 = new TextBox();
+            accountCredited2 = new TextBox();
             textBox3 = new TextBox();
             tuitionFeeLec = new TextBox();
             tuitionFeeLab = new TextBox();
             laboratoryFee = new TextBox();
+            studentStatus = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -289,18 +289,6 @@
             label1.Text = "ENROLLED SUBJECTS";
             label1.Click += label1_Click;
             // 
-            // studentStatus
-            // 
-            studentStatus.AutoSize = true;
-            studentStatus.BackColor = SystemColors.ButtonHighlight;
-            studentStatus.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            studentStatus.Location = new Point(252, 173);
-            studentStatus.Name = "studentStatus";
-            studentStatus.Size = new Size(95, 25);
-            studentStatus.TabIndex = 1;
-            studentStatus.Text = "Status : ---";
-            studentStatus.Click += label2_Click;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -355,7 +343,7 @@
             label8.Name = "label8";
             label8.Size = new Size(62, 25);
             label8.TabIndex = 7;
-            label8.Text = "00000";
+            label8.Text = "60017";
             label8.Click += label8_Click;
             // 
             // label10
@@ -378,7 +366,7 @@
             label11.Name = "label11";
             label11.Size = new Size(62, 25);
             label11.TabIndex = 11;
-            label11.Text = "00000";
+            label11.Text = "60018";
             // 
             // label13
             // 
@@ -400,7 +388,7 @@
             label14.Name = "label14";
             label14.Size = new Size(62, 25);
             label14.TabIndex = 15;
-            label14.Text = "00000";
+            label14.Text = "07012";
             // 
             // label16
             // 
@@ -422,7 +410,7 @@
             label17.Name = "label17";
             label17.Size = new Size(62, 25);
             label17.TabIndex = 19;
-            label17.Text = "00000";
+            label17.Text = "07013";
             // 
             // label19
             // 
@@ -444,7 +432,7 @@
             label20.Name = "label20";
             label20.Size = new Size(62, 25);
             label20.TabIndex = 23;
-            label20.Text = "00000";
+            label20.Text = "11980";
             // 
             // label22
             // 
@@ -466,7 +454,7 @@
             label23.Name = "label23";
             label23.Size = new Size(62, 25);
             label23.TabIndex = 27;
-            label23.Text = "00000";
+            label23.Text = "11981";
             // 
             // label25
             // 
@@ -488,7 +476,7 @@
             label26.Name = "label26";
             label26.Size = new Size(62, 25);
             label26.TabIndex = 31;
-            label26.Text = "00000";
+            label26.Text = "34432";
             // 
             // label28
             // 
@@ -510,7 +498,7 @@
             label29.Name = "label29";
             label29.Size = new Size(62, 25);
             label29.TabIndex = 35;
-            label29.Text = "00000";
+            label29.Text = "65312";
             // 
             // label31
             // 
@@ -532,7 +520,7 @@
             label32.Name = "label32";
             label32.Size = new Size(62, 25);
             label32.TabIndex = 39;
-            label32.Text = "00000";
+            label32.Text = "90016";
             // 
             // label34
             // 
@@ -554,7 +542,7 @@
             label35.Name = "label35";
             label35.Size = new Size(62, 25);
             label35.TabIndex = 43;
-            label35.Text = "00000";
+            label35.Text = "09001";
             // 
             // label36
             // 
@@ -1316,7 +1304,7 @@
             // termBox
             // 
             termBox.FormattingEnabled = true;
-            termBox.Items.AddRange(new object[] { "1 Term", "2 Term", "3 Term", "4 Term", "5 Term" });
+            termBox.Items.AddRange(new object[] { "Full Payment", "2 Term", "3 Term", "4 Term", "5 Term" });
             termBox.Location = new Point(1281, 545);
             termBox.Name = "termBox";
             termBox.RightToLeft = RightToLeft.No;
@@ -1357,33 +1345,35 @@
             pictureBox15.TabIndex = 137;
             pictureBox15.TabStop = false;
             // 
-            // textBox1
+            // accountCredited1
             // 
-            textBox1.BackColor = Color.Yellow;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(1069, 308);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(417, 63);
-            textBox1.TabIndex = 138;
-            textBox1.Text = "Your payment has been credited to your account. Please print your enrolled subjects and assessment from your E-Learning Account as proof of your Enrollment.";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            accountCredited1.BackColor = Color.Yellow;
+            accountCredited1.BorderStyle = BorderStyle.FixedSingle;
+            accountCredited1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            accountCredited1.Location = new Point(1069, 308);
+            accountCredited1.Multiline = true;
+            accountCredited1.Name = "accountCredited1";
+            accountCredited1.ReadOnly = true;
+            accountCredited1.Size = new Size(417, 63);
+            accountCredited1.TabIndex = 138;
+            accountCredited1.Text = "Your payment has been credited to your account. Please print your enrolled subjects and assessment from your E-Learning Account as proof of your Enrollment.";
+            accountCredited1.TextAlign = HorizontalAlignment.Center;
+            accountCredited1.Visible = false;
             // 
-            // textBox2
+            // accountCredited2
             // 
-            textBox2.BackColor = Color.Yellow;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(1069, 379);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(417, 147);
-            textBox2.TabIndex = 139;
-            textBox2.Text = resources.GetString("textBox2.Text");
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            accountCredited2.BackColor = Color.Yellow;
+            accountCredited2.BorderStyle = BorderStyle.FixedSingle;
+            accountCredited2.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            accountCredited2.Location = new Point(1069, 379);
+            accountCredited2.Multiline = true;
+            accountCredited2.Name = "accountCredited2";
+            accountCredited2.ReadOnly = true;
+            accountCredited2.Size = new Size(417, 147);
+            accountCredited2.TabIndex = 139;
+            accountCredited2.Text = resources.GetString("accountCredited2.Text");
+            accountCredited2.TextAlign = HorizontalAlignment.Center;
+            accountCredited2.Visible = false;
             // 
             // textBox3
             // 
@@ -1430,13 +1420,27 @@
             laboratoryFee.BackColor = Color.White;
             laboratoryFee.BorderStyle = BorderStyle.None;
             laboratoryFee.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            laboratoryFee.Location = new Point(827, 415);
+            laboratoryFee.Location = new Point(825, 415);
             laboratoryFee.Name = "laboratoryFee";
             laboratoryFee.ReadOnly = true;
             laboratoryFee.RightToLeft = RightToLeft.Yes;
             laboratoryFee.Size = new Size(137, 20);
             laboratoryFee.TabIndex = 143;
             laboratoryFee.Text = "0.00";
+            // 
+            // studentStatus
+            // 
+            studentStatus.BackColor = Color.White;
+            studentStatus.BorderStyle = BorderStyle.None;
+            studentStatus.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            studentStatus.Location = new Point(136, 175);
+            studentStatus.Name = "studentStatus";
+            studentStatus.ReadOnly = true;
+            studentStatus.RightToLeft = RightToLeft.No;
+            studentStatus.Size = new Size(344, 25);
+            studentStatus.TabIndex = 144;
+            studentStatus.Text = "Status: --";
+            studentStatus.TextAlign = HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -1445,12 +1449,13 @@
             BackColor = Color.RoyalBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1510, 804);
+            Controls.Add(studentStatus);
             Controls.Add(laboratoryFee);
             Controls.Add(tuitionFeeLab);
             Controls.Add(tuitionFeeLec);
             Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(accountCredited2);
+            Controls.Add(accountCredited1);
             Controls.Add(pictureBox15);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(termBox);
@@ -1538,7 +1543,6 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(studentStatus);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox4);
@@ -1580,7 +1584,6 @@
         #endregion
 
         private Label label1;
-        private Label studentStatus;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -1690,11 +1693,12 @@
         private Label misc16;
         private PictureBox pictureBox2;
         private PictureBox pictureBox15;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox accountCredited1;
+        private TextBox accountCredited2;
         private TextBox textBox3;
         private TextBox tuitionFeeLec;
         private TextBox tuitionFeeLab;
         private TextBox laboratoryFee;
+        private TextBox studentStatus;
     }
 }
