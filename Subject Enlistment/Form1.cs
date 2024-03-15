@@ -53,15 +53,17 @@ namespace Subject_Enlistment
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // for error handling
             if (!ValidateInput())
             {
                 return;
             }
 
+            // will make the account credited text boxes visible if the subject enlistment is successful
             accountCredited1.Visible = true;
             accountCredited2.Visible = true;
 
+            // converting all the values inside the textbox into an integer, so that we could add them
             int cprogLec, cprogLab, oopLec, oopLab, appDevLec, appDevLab, computing2, uts, pathfit2, theology2;
             cprogLec = Convert.ToInt32(comProgLec.Text);
             cprogLab = Convert.ToInt32(comProgLab.Text);
@@ -82,6 +84,7 @@ namespace Subject_Enlistment
             }
             else if (totalUnits <= 18) { studentStatus.Text = "IRREGULAR STUDENT"; studentStatus.ForeColor = Color.Red; studentStatus.Refresh(); }
 
+            // converting the labels into integer to be able to update their values according to the number of units
             double tfLecTotal, tfLabTotal, labFeeTotal, totalTuition, assessmentFees, downpayment;
             double[] miscFees = new double[17];
             tfLecTotal = (cprogLec + oopLec + appDevLec + computing2 + uts + pathfit2 + theology2) * 1474;
@@ -98,11 +101,13 @@ namespace Subject_Enlistment
             totalTF.Text = totalTuition.ToString("F2");
             DP.Text = downpayment.ToString("F2");
 
+            // an algorithm that uses arrays to iterate through all of the miscellaneous fees, and converting them into double
             for (int x = 0; x < 17; x++)
             {
                 miscFees[x] = Convert.ToDouble(Controls["misc" + (x + 1)].Text);
             }
 
+            // adding the misc fees from the array
             double totalMiscFees = miscFees.Sum();
             feeAssessment.Text = (totalMiscFees + totalTuition).ToString("F2");
             miscFee.Text = totalMiscFees.ToString("F2");
